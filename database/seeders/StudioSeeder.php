@@ -1,0 +1,21 @@
+<?php
+
+namespace Database\Seeders;
+
+
+use App\Models\Studio;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class StudioSeeder extends Seeder
+{
+  
+    public function run(): void
+    {
+        Studio::create([
+            'code' => '1',
+            'name' => 'Imugi Do - Coyhaique',
+            'image' => 'imugi-do.png'        
+        ]);        
+    }
+}
