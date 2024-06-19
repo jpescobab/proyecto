@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>@yield('title')</title>
-    <link rel="icon" type="image/x-icon" href="imugi/assets/img/favicon.ico"/>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="imugi/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="imugi/assets/css/plugins.css" rel="stylesheet" type="text/css" />   
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />   
 
     <style>       
         .layout-px-spacing {
@@ -52,18 +52,18 @@
     <!-- END MAIN CONTAINER -->
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    <script src="imugi/assets/js/libs/jquery-3.1.1.min.js"></script>
-    <script src="imugi/bootstrap/js/popper.min.js"></script>
-    <script src="imugi/bootstrap/js/bootstrap.min.js"></script>
-    <script src="imugi/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="imugi/assets/js/app.js"></script>
+    <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/app.js"></script>
     
     <script>
         $(document).ready(function() {
             App.init();
         });
     </script>
-    <script src="imugi/assets/js/custom.js"></script>
+    <script src="assets/js/custom.js"></script>
 
     @yield('scripts')   
 </body>

@@ -162,8 +162,8 @@
                         <div class="items">
                             <div class="item-content">
                                 <div class="user-profile">                                   
-                                    <img src="imugi/assets/img/mati_01.png" alt="avatar">
-                                    <img src="imugi/assets/img/belt_yellow.PNG" alt="avatar">
+                                    <img src="img/mati_01.png" alt="avatar">
+                                    <img src="img/belt_yellow.PNG" alt="avatar">
                                     <div class="user-meta-info">
                                         <p class="user-name" data-name="Alan Green">{{$studio->codigo}} </p>
                                         <p class="user-work" data-occupation="Web Developer">Dragón</p>
@@ -200,7 +200,7 @@
 
        
 @section('scripts')
-    <script src="imugi/assets/js/custom.js"></script>   
-    <script src="imugi/plugins/jquery-ui/jquery-ui.min.js"></script>
-    <script src="imugi/assets/js/apps/contact.js"></script>
+    <script src="assets/js/custom.js"></script>   
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/js/apps/contact.js"></script>
 @endsection

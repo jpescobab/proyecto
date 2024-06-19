@@ -12,10 +12,11 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->string('cni',10);
-            $table->string('lastname',50);
             $table->string('name',50);
-            $table->string('category',25);
-            $table->string('range',25);
+            $table->string('lastname',50);   
+            $table->enum('gender',['Femenino', 'Masculino']);
+            $table->enum('category', ['Infantil', 'Juvenil','Adulto','Senior']);
+            $table->enum('range',['Tigre', 'Dragon','Gup','Master']);
             $table->date('birthday');
             $table->string('phone',25);
             $table->string('tutor',50);

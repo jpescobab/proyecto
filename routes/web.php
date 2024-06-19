@@ -21,7 +21,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::get('/studios', [App\Http\Controllers\StudioController::class, 'index'])->name('studios.index');
+Route::get('/studios', [App\Http\Controllers\StudioController::class, 'index'])->name('studios.index');
 Route::get('/students', [App\Http\Controllers\StudentController::class, 'index'])->name('students.index');
 
 //Route Hooks - Do not delete//

@@ -3,10 +3,9 @@
 @section('title', 'Estudiantes')
  
 @section('styles')
-
     <link rel="stylesheet" type="text/css" href="imugi/assets/css/forms/theme-checkbox-radio.css">
-    <link href="imugi/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
-    <link href="imugi/assets/css/apps/contacts.css" rel="stylesheet" type="text/css" />  
+    <link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/apps/contacts.css" rel="stylesheet" type="text/css" />  
     
     <style>
         .tillana-regular {
@@ -145,7 +144,17 @@
                                     <h4>Estudiante</h4>
                                 </div>
                                 <div class="user-email">
-                                    <h4>Nombre</h4>
+                                    <h4>Nombres</h4>
+                                </div>
+                               
+                                <div class="user-location">
+                                    <h4 style="margin-left: 0;">Genero</h4>
+                                </div>
+                                <div class="user-location">
+                                    <h4 style="margin-left: 0;">Categoria</h4>
+                                </div>
+                                <div class="user-location">
+                                    <h4 style="margin-left: 0;">Rango</h4>
                                 </div>
                                 <div class="user-location">
                                     <h4 style="margin-left: 0;">Email</h4>
@@ -161,19 +170,32 @@
         @foreach($students as $student)
                         <div class="items">
                             <div class="item-content">
-                                <div class="user-profile">                                   
-                                    <img src="imugi/assets/img/90x90.jpg" alt="avatar">
-                                    <img src="imugi/assets/img/belt_yellow.PNG" alt="avatar">
+                                <div class="user-profile">   
+                                                            
+                                    <img src="img/{{$student->image}}" alt="avatar">                                   
                                     <div class="user-meta-info">
-                                        <p class="user-name" data-name="Alan Green">{{$student->category}} </p>
-                                        <p class="user-work" data-occupation="Web Developer">{{$student->range}}</p>
+                                        <p class="user-name" data-name="Alan Green">{{$student->cni}} </p>                                      
                                     </div>                                           
                                 </div>
+                                <div class="user-profile">                                   
+                                    <p class="usr-email-addr" data-email="alan@mail.com">{{$student->name}}</p> 
+                                </div>
                                 
-                                <div class="user-email">
-                                    <p class="info-title">Nombre: </p>
-                                    <p class="usr-email-addr" data-email="alan@mail.com">{{$student->name}}</p>
+                                <div class="user-profile">  
                                     <p class="usr-email-addr" data-email="alan@mail.com">{{$student->lastname}}</p>
+                                    <img src="img/belt_green.png" alt="avatar">
+                                </div>
+                                <div class="user-location">
+                                    <p class="info-title">Genero: </p>
+                                    <p class="usr-location" data-location="Boston, USA">{{$student->gender}}</p>
+                                </div>
+                                <div class="user-location">
+                                    <p class="info-title">Categoria: </p>
+                                    <p class="usr-location" data-location="Boston, USA">{{$student->category}}</p>
+                                </div>
+                                <div class="user-location">
+                                    <p class="info-title">Rango: </p>
+                                    <p class="usr-location" data-location="Boston, USA">{{$student->range}}</p>
                                 </div>
                                 <div class="user-location">
                                     <p class="info-title">Email: </p>
@@ -200,7 +222,7 @@
 
        
 @section('scripts')
-    <script src="imugi/assets/js/custom.js"></script>   
-    <script src="imugi/plugins/jquery-ui/jquery-ui.min.js"></script>
-    <script src="imugi/assets/js/apps/contact.js"></script>
+    <script src="assets/js/custom.js"></script>   
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/js/apps/contact.js"></script>
 @endsection
