@@ -1,4 +1,15 @@
+    
+
+    
 try {
+       // Convertir JSON a objetos JavaScript válidos
+       let meses = JSON.parse('{!! json_encode($meses) !!}');
+       let cantidadDtes = JSON.parse('{!! json_encode($cantidadDtes) !!}');
+       let totalMontos = JSON.parse('{!! json_encode($totalMontos) !!}');
+
+       console.log("Meses:", meses);
+       console.log("Cantidad DTEs:", cantidadDtes);
+       console.log("Total Montos:", totalMontos);
 
   /*
 
@@ -56,17 +67,17 @@ var d_2options1 = {
         }
     }],
     series: [{
-        name: 'Sales',
-        data: [44, 55, 41, 67, 22, 43, 21]
+        name: 'Dtes',
+        data: cantidadDtes
     },{
-        name: 'Last Week',
-        data: [13, 23, 20, 8, 13, 27, 33]
+        name: 'Totales',
+        data: totalMontos
     }],
     xaxis: {
         labels: {
             show: false,
         },
-        categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'],
+        categories: meses,
     },
     yaxis: {
         show: false
@@ -270,13 +281,13 @@ var options1 = {
       lineCap: 'square'
   },
   series: [{
-      name: 'Income',
-      data: [16800, 16800, 15500, 17800, 15500, 17000, 19000, 16000, 15000, 17000, 14000, 17000]
+      name: 'Totales',
+      data: totalMontos
   }, {
-      name: 'Expenses',
-      data: [16500, 17500, 16200, 17300, 16000, 19500, 16000, 17000, 16000, 19000, 18000, 19000]
+      name: 'Dtes',
+      data: cantidadDtes
   }],
-  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  labels: meses,
   xaxis: {
     axisBorder: {
       show: false
@@ -453,8 +464,8 @@ var options = {
       show: true,
       width: 25,
     },
-    series: [985, 737, 270],
-    labels: ['Apparel', 'Electronic', 'Others'],
+    series: [985, 737, 10],
+    labels: ['FAE', 'FEEX', 'Otros'],
     responsive: [{
         breakpoint: 1599,
         options: {
@@ -516,8 +527,8 @@ d_2C_2.render();
         Revenue Monthly | Render
     ================================
 */
-var chart1 = new ApexCharts(
-    document.querySelector("#revenueMonthly"),
+var grafico_1 = new ApexCharts(
+    document.querySelector("#grafico_1"),
     options1
 );
 

@@ -1,4 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.theme.app')
+@section('title', "password")
+@section('title2', "Resetear")
 
 @section('content')
 <div class="container">
