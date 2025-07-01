@@ -1,0 +1,42 @@
+
+@media screen and (max-width: 768px) {
+    .topbar-nav nav {
+        flex-direction: column;
+    }
+
+    .topbar-nav .menu.single-menu {
+        width: 100%;
+        text-align: left;
+    }
+
+    .topbar-nav .dropdown-toggle > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .topbar-nav .dropdown-toggle svg {
+        max-width: 20px;
+        height: auto;
+    }
+
+    .topbar-nav .menu-categories {
+        flex-direction: column;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .topbar-nav .menu-categories > li {
+        display: inline-block;
+        min-width: 180px;
+    }
+
+    .topbar-nav .submenu,
+    .topbar-nav .sub-submenu {
+        position: relative;
+        left: 0;
+        top: 0;
+        background: #f8f9fa;
+        z-index: 1;
+    }
+}

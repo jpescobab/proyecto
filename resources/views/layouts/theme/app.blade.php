@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>@yield('title')</title>
+    
     <link rel="icon" type="image/x-icon" href="{{asset('img/favicon.ico')}}"/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
@@ -19,10 +20,10 @@
     <!-- END PAGE LEVEL PLUGINS -->
     
     <!--  BEGIN CUSTOM STYLE FILE  -->
-    <link href="{{asset('assets/css/scrollspyNav.css')}} " rel="stylesheet" type="text/css" />
+    {{-- <link href="{{asset('assets/css/scrollspyNav.css')}} " rel="stylesheet" type="text/css" /> --}}
     <link href="{{asset('assets/css/components/custom-modal.css')}} " rel="stylesheet" type="text/css" />
 
-
+  
     <style>       
         .layout-px-spacing {
             min-height: calc(100vh - 184px)!important;
@@ -136,10 +137,12 @@
 
    
     </style>      
-  
+
     @yield('styles')  
+    
 
     @livewireStyles  
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive-navbar.css') }}">    
 </head>
 
 <body class="sidebar-noneoverflow">
@@ -171,25 +174,29 @@
     <!-- END MAIN CONTAINER -->
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    <script>
+   
+     <script src="{{asset('assets/js/libs/jquery-3.1.1.min.js')}} "></script>
+
+     <script>
         $(document).ready(function() {
             App.init();
         });
     </script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{asset('assets/js/libs/jquery-3.1.1.min.js')}} "></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>   
     <script src="{{asset('bootstrap/js/popper.min.js')}} "></script>
     <script src="{{asset('bootstrap/js/bootstrap.min.js')}} "></script>
     <script src="{{asset('plugins/perfect-scrollbar/perfect-scrollbar.min.js')}} "></script>
-    <script src="{{asset('assets/js/app.js')}} "></script>
+    <script src="{{asset('assets/js/app.js')}} " defer></script>
+  
     
     
     <script src="{{asset('assets/js/custom.js')}}"></script>
  
-    <script src="{{asset('assets/js/scrollspyNav.js')}}"></script>   
+    {{-- <script src="{{asset('assets/js/scrollspyNav.js')}}"></script>    --}}
 
     @yield('scripts')   
+    @stack('scripts')
 
     @livewireScripts
 </body>

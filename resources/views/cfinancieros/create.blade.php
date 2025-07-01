@@ -29,7 +29,8 @@
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
-        </div>
+        </div>        
+        
 
         <div class="form-group text-end">
             <a href="{{ route('cfinancieros.index') }}" class="btn btn-secondary btn-sm">Cancelar</a>
